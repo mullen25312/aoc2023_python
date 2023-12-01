@@ -2,7 +2,7 @@ from dxx.superDailyPuzzle import SuperDailyPuzzle
 
 import numpy as np
 
-# advent of code 2021 day 1 as template
+# advent of code 2023 day 0 as template
 class DailyPuzzle(SuperDailyPuzzle):
     def __init__(self, data_path):
         super().__init__(data_path)
