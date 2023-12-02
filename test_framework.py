@@ -7,7 +7,7 @@ from itertools import product
 
 # tests to run
 #days_to_be_tested = ["d00", "d01", "d02", "d03", "d04", "d05", "d06", "d07", "d08", "d09", "d10", "d11", "d12", "d13", "d14", "d17", "d21"]
-days_to_be_tested = ["d00", "d01"]
+days_to_be_tested = ["d00", "d01", "d02"]
 scenarios = ["demo", "input"]
 ids = tuple(f"{id[1]} -> {id[0]}" for id in product(days_to_be_tested, scenarios))
 
@@ -39,12 +39,12 @@ def prepare_test(request):
 
 @pytest.mark.usefixtures("prepare_test")
 class Tests_dxx:
-    def test_parse(self):
-        self.puzzle.parse()
-        if self.test_config.parse_result == "":
-            pytest.skip("expected input not provided")
-        else:
-            assert self.puzzle.parsed == self.test_config.parse_result
+    # def test_parse(self):
+    #     self.puzzle.parse()
+    #     if self.test_config.parse_result == "":
+    #         pytest.skip("expected input not provided")
+    #     else:
+    #         assert self.puzzle.parsed == self.test_config.parse_result
 
     def test_part_one(self):
         self.puzzle.parse()

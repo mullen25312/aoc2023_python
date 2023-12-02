@@ -8,7 +8,8 @@
         "**/__pycache__": true,
         ".pytest_cache": true,
     },
-    "python.formatting.blackArgs": [
-        "--line-length 140"
-    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": false,
+    }
 }
