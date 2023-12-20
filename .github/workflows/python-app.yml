@@ -29,6 +29,6 @@ jobs:
       - name: Build and run Dev Container task
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/mullen25312/aoc2023_rust
-          cacheFrom: ghcr.io/mullen25312/aoc2023_rust
+          imageName: ghcr.io/mullen25312/aoc2023_python
+          cacheFrom: ghcr.io/mullen25312/aoc2023_python
           runCmd: pytest -v
