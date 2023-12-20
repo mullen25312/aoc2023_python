@@ -5,7 +5,7 @@ import os
 import importlib
 
 # dailyPuzzles = ["d00", "d01", "d02", "d03", "d04", "d06", "d07", "d08", "d09", "d10", "d11", "d12", "d13"]
-dailyPuzzles = ["d15"]
+dailyPuzzles = ["d16"]
 
 # dailyPuzzles = dailyPuzzles[-2:]
 
@@ -14,8 +14,8 @@ if __name__ == "__main__":
     for module in dailyPuzzles:
         # import daily module
         importedModule = importlib.import_module(f"{module}.dailyPuzzle")
-        puzzle = importedModule.DailyPuzzle(os.path.join(module, "demo.txt"))
-        # puzzle = importedModule.DailyPuzzle(os.path.join(module, "input.txt"))
+        # puzzle = importedModule.DailyPuzzle(os.path.join(module, "demo.txt"))
+        puzzle = importedModule.DailyPuzzle(os.path.join(module, "input.txt"))
 
         # solve puzzle
         puzzle.parse()
